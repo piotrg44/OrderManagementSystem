@@ -1,11 +1,11 @@
 version: '3'
 services:
-  mysql:
-    image: mysql:latest
+  db:
+    build: ./db
     ports:
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: your_password
-      MYSQL_DATABASE: your_database
-      MYSQL_USER: your_username
-      MYSQL_PASSWORD: your_user_password
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'salesman'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
